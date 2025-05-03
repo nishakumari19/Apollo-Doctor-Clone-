@@ -1,4 +1,3 @@
-// utils/api.js
 export const fetchDoctors = async (filters, page = 1, limit = 6) => {
     const params = new URLSearchParams();
 
@@ -14,6 +13,6 @@ export const fetchDoctors = async (filters, page = 1, limit = 6) => {
     params.append('page', page);
     params.append('limit', limit);
 
-    const res = await fetch(`http://localhost:5000/api/list-doctor-with-filter?${params.toString()}`);
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/list-doctor-with-filter?${params.toString()}`);
     return await res.json();
 };

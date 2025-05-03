@@ -2,7 +2,7 @@
 
 export default function Header() {
     const handleNoNav = () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' }); // Avoids routing
+        window.scrollTo({ top: 0, behavior: 'smooth' }); 
     };
 
     return (
